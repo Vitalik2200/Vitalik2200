@@ -31,6 +31,27 @@
         context_canva.strokeStyle = "red"; // задаём цвет секундной стрелки
         context_canva.stroke(linesec); //прорисовываем линию на канве
 
+        context_canva.strokeStyle = "black";
+        let rMin = r-20;
+        let linemin = new Path2D();
+        linemin.moveTo(x,y);
+        let xMin = Math.cos(Math.PI*5/3)*rMin + x;
+        let yMin = -Math.sin(Math.PI*5/3)*rMin + y;
+        linemin.lineTo(xMin,yMin);
+        context_canva.lineWidth= 3;
+        context_canva.stroke(linemin);
+
+        context_canva.strokeStyle = "black";
+        let rh = r-30;
+        let lineh = new Path2D();
+        lineh.moveTo(x,y);
+        let xh = Math.cos(Math.PI*7/6)*rh + x;
+        let yh = -Math.sin(Math.PI*7/6)*rh + y;
+        lineh.lineTo(xh,yh);
+        context_canva.lineWidth= 3;
+        context_canva.stroke(lineh);
+
+
         //добавьте здесь код для часовой и минутной стрелки
         //стрелки должны быть чёрного цвета
         //минутная стрелка должна быть короче секундной на 10 пикселей
